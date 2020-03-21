@@ -1,7 +1,9 @@
 import axios from 'axios';
 import phonebookActions from './phonebookActions';
 
-axios.defaults.baseURL = 'http://localhost:3500';
+axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com/v1';
+axios.defaults.headers.common['Authorization'] = 'a8ba0f66-29a2-4ed7-9ff2-514ea8b41c11';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 const addContact = (name, number) => (dispatch, getState) => {
   // Check if a new name exists in contacts

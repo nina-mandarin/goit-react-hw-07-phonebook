@@ -26,7 +26,7 @@ class ContactForm extends Component {
     const { name, number } = this.state;
 
     if (name && number) {
-      this.props.onCreateContact(this.state.name, this.state.number);
+      this.props.onCreateContact(this.state.name, String(this.state.number));
       return this.setState({ name: '', number: '' });
     }
 
